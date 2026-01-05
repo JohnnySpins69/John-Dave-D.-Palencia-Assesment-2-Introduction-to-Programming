@@ -68,7 +68,7 @@ def show_menu():
     "\n--------------------------------------------------------"  #this looks fire sheeeesh
     )
     for code, details in products.items():
-        print(f"{code:<6}: {details['item']:<20} | {details['price']:<7} AED | Stock: {details['stock']}")
+        print(f"{code:<6}| {details['item']:<20} | {details['price']:<7} AED | Stock: {details['stock']}")
     print("========================================================")
 
 
@@ -76,15 +76,15 @@ def show_menu():
 def func_suggest_pairing(code):
     if code in foods:
         print("\nWould you like a drink with that bruv?")
-        print("I personally recommend: C1 (Juice), C2(Coffee), and C3 (Water)")
+        print("\nI personally recommend: C1 (Juice), C2(Coffee), and C3 (Water)")
         recommended = ["C1","C2","C3"]
     elif code in drinks:
         print("\nSweets would go bonkers with your drink fam.")
-        print("I personally recommend: B1 (Chocolate), B2 (Cookies), and (marshmallows)")
+        print("\nI personally recommend: B1 (Chocolate), B2 (Cookies), and (marshmallows)")
         recommended = ["B1","B2","B3"]
     elif code in sweets:
         print("\nA drink goes well with sweets as usual (Don't be shy now fam).")
-        print("I personally recommend: C1 (Juice), C2(Coffee), and C3 (Water)")
+        print("\nI personally recommend: C1 (Juice), C2(Coffee), and C3 (Water)")
         recommended = ["C1", "C2", "C3"]
 
     else:
@@ -201,7 +201,7 @@ def main_loop():
             else:
                 change = money - total_sum
                 print("Payment accepted. Nice!")
-                print(f"Your change is {change} AED.")
+                print(f"\nYour change is {change} AED.")
                 speak("Payment accepted.")
 
             #respectfully vanquish 1 stock:
